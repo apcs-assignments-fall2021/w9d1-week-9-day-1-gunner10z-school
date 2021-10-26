@@ -6,8 +6,15 @@ public class BankClient {
         Scanner scan = new Scanner(System.in);
         System.out.println("What is your preferred name?");
         String name = scan.nextLine();
-//        // Create a bank account with the given name and the account number 101134
-//        BankAccount account = new BankAccount(name, 101134);
+        BankAccount account = new BankAccount(10000, 1234884,name);
+        account.withdraw(5000);
+        System.out.println(account.getBalance());//5000
+        System.out.println(account.getPreferredName());//whatever it got
+        account.setPreferredName("lmao");
+        System.out.println(account.getPreferredName());//lmao
+        account.deposit(10000);
+        System.out.println(account.getBalance());//15000
+
         Car Macan=new Car(20,15,"Porsche");
         Macan.toggleSwitch();
         System.out.println(Macan.getIsOn());//True

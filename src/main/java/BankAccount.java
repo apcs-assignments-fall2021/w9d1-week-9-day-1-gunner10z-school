@@ -9,7 +9,7 @@ public class BankAccount {
         accountNumber=b;
         preferredName=c;
     }
-    private void withdraw(int x){
+    public void withdraw(int x){
         if (x<=this.balance){
             this.balance-=x;
             System.out.println("User has withdrawn "+x+" dollars.");
@@ -18,19 +18,19 @@ public class BankAccount {
             System.out.println("Not enough money in account");
         }
     }
-    private void deposit(int x){
+    public void deposit(int x){
         this.balance+=x;
     }
-    private int getBalance(){
+    public int getBalance(){
         return this.balance;
     }
-    private int getAccountNumber(){
+    public int getAccountNumber(){
         return this.accountNumber;
     }
-    private String getPreferredName(){
+    public String getPreferredName(){
         return this.preferredName;
     }
-    private void setPreferredName(String x){
+    public void setPreferredName(String x){
         this.preferredName=x;
     }
     @Override
